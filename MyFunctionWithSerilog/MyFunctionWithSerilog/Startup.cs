@@ -20,8 +20,8 @@ public class Startup : FunctionsStartup
             .MinimumLevel.Override("Host", LogEventLevel.Warning)
             .MinimumLevel.Override("System", LogEventLevel.Error)
             .MinimumLevel.Override("Function", LogEventLevel.Error)
-            .MinimumLevel.Override("Azure.Storage.Blobs", LogEventLevel.Error)
             .MinimumLevel.Override("Azure.Core", LogEventLevel.Error)
+            // .MinimumLevel.Override("Azure", LogEventLevel.Error)
             .WriteTo.Console()
             .WriteTo.Debug()
             .WriteTo.File(
